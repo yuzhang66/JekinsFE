@@ -2,7 +2,8 @@
 <html lang="en">
 
 <head>
-
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -60,35 +61,35 @@
 
       <!-- Nav Item - library 1 -->
       <li class="nav-item">
-        <a class="nav-link" href="charts.html">
+        <a class="nav-link">
           <i class="fas fa-fw fa-folder"></i>
           <span>xf_database</span></a>
       </li>
 
       <!-- Nav Item - library 2 -->
       <li class="nav-item">
-        <a class="nav-link" href="charts.html">
+        <a class="nav-link">
           <i class="fas fa-fw fa-folder"></i>
           <span>xf_fintech</span></a>
       </li>
 
       <!-- Nav Item - library 3 -->
       <li class="nav-item">
-        <a class="nav-link" href="tables.html">
+        <a class="nav-link" >
           <i class="fas fa-fw fa-folder"></i>
           <span>xf_solver</span></a>
       </li>
 
       <!-- Nav Item - library 4 -->
       <li class="nav-item">
-        <a class="nav-link" href="tables.html">
+        <a class="nav-link">
           <i class="fas fa-fw fa-folder"></i>
           <span>xf_utils</span></a>
       </li>
 
       <!-- Nav Item - library 5 -->
       <li class="nav-item">
-        <a class="nav-link" href="tables.html">
+        <a class="nav-link" >
           <i class="fas fa-fw fa-folder"></i>
           <span>xf_security</span></a>
       </li>
@@ -143,14 +144,14 @@
           <div class="card shadow mb-4">
             <div class="card-body">
               <div class="table-responsive">
-                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <table class="table table-bordered display" id="example" width="100%" cellspacing="0">
                   <thead>
                     <tr>
-                      <th>No.</th>
-                      <th>Case Name</th>
-                      <th>Test Case</th>
-                      <th>Test Result</th>
-                      <th>Unique error</th>
+                      <th>Issue Title</th>
+                      <th>Created</th>
+                      <th>Closed</th>
+                      <th>Url Address</th>
+                      <th>Unique Error</th>
                     </tr>
                   </thead>
                 </table>
@@ -165,16 +166,16 @@
                           "contentType": "application/json"
                         },
                         "columns": [
-                          { "data": "No." },
                           { "data": "case_name" },
+                          { "data": "case_number" },
+                          { "data": "Test_Result" },
                           {
-                            "data": "test_case",
+                            "data": "Test_case_url",
                             sortable: false, render: function (data, type, row) {
                               return '<a href="' + data + '" target="_blank">' + data + '</a>';
                             }
                           },
-                          { "data": "test_result" },
-                          {"data":"unique_error"}
+                          { "data": "Unique_Error" },
                         ]
                       });
                     });
